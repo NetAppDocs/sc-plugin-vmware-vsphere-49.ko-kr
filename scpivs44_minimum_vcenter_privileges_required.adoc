@@ -1,0 +1,112 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_minimum_vcenter_privileges_required.html 
+keywords:  
+summary: VMware vSphere용 SnapCenter 플러그인 구축을 시작하기 전에 필요한 최소 vCenter 권한이 있는지 확인해야 합니다. 
+---
+= 최소 vCenter 권한이 필요합니다
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+VMware vSphere용 SnapCenter 플러그인 구축을 시작하기 전에 필요한 최소 vCenter 권한이 있는지 확인해야 합니다.
+
+
+
+== vCenter 관리자 역할에 필요한 권한
+
+datastore.AllocateSpace를 입력합니다
+데이터 저장소. 찾아보기
+데이터 저장소. 삭제
+datastore.FileManagement를 참조하십시오
+데이터 저장소. 이동
+datastore.Rename을 선택합니다
+내선 번호.\n\n 등록하십시오
+내선 번호. 등록 취소
+연장. 업데이트
+Host.Config.AdvancedConfig
+Host.Config.Resources를 참조하십시오
+Host.Config.Settings(호스트 구성 설정
+Host.Config.Storage를 참조하십시오
+Host.Local.CreateVM을 선택합니다
+Host.Local.DeleteVM을 선택합니다
+Host.Local.ReconfigVM을 선택합니다
+Network.Assign을 선택합니다
+Resource.ApplyRecommendation 을 참조하십시오
+리소스.AssignVMToPool을 참조하십시오
+리소스. ColdMigrate
+리소스.HotMigrate
+Resource.QueryVMotion을 참조하십시오
+시스템.익명
+System.Read 를 참조하십시오
+System.View(시스템.보기)
+작업.생성
+작업. 업데이트
+VirtualMachine.Config.AddExistingDisk를 참조하십시오
+VirtualMachine.Config.AddNewDisk를 참조하십시오
+VirtualMachine.Config.AdvancedConfig
+VirtualMachine.Config.ReloadFromPath 를 참조하십시오
+VirtualMachine.Config.RemoveDisk를 참조하십시오
+VirtualMachine.Config.Resource를 참조하십시오
+VirtualMachine.GuestOperations.Execute 를 참조하십시오
+VirtualMachine.GuestOperations.Modify 를 참조하십시오
+VirtualMachine.GuestOperations.Query 를 참조하십시오
+VirtualMachine.Interact.poweroff
+VirtualMachine.Interact.PowerOn을 참조하십시오
+VirtualMachine.Inventory.Create를 선택합니다
+VirtualMachine.Inventory.CreateFromExisting 을 참조하십시오
+VirtualMachine.Inventory.Delete 를 선택합니다
+VirtualMachine.Inventory.Move를 선택합니다
+VirtualMachine.Inventory.Register를 참조하십시오
+VirtualMachine.Inventory.Unregister 를 선택합니다
+VirtualMachine.State.CreateSnapshot 을 참조하십시오
+VirtualMachine.State.RemoveSnapshot 을 참조하십시오
+VirtualMachine.State.RevertToSnapshot 을 참조하십시오
+
+
+
+== VMware vCenter용 SnapCenter 플러그인과 관련된 필수 권한
+
+|===
+
+
+| * 권한 * | * 레이블 * 
+
+
+| netscV.Guest.RestoreFile입니다 | 게스트 파일 복원 
+
+
+| NetApp SCV.Recovery.MountUnmount 를 참조하십시오 | 마운트/마운트 해제 
+
+
+| netappSCV.Backup.DeleteBackupJob을 참조하십시오 | 리소스 그룹/백업을 삭제합니다 
+
+
+| netappSCV.Configure.ConfigureStorageSystems.Delete를 참조하십시오 | 스토리지 시스템을 제거합니다 
+
+
+| netappSCV.View를 참조하십시오 | 보기 
+
+
+| netappSCV.Recovery.RecoverVM | VM 복구 
+
+
+| NetApp SCV.Configure.ConfigureStorageSystems.AddUpdate를 참조하십시오 | 스토리지 시스템 추가/수정 
+
+
+| NetApp SCV.Backup.BackupNow | 지금 백업 
+
+
+| netappSCV.Guest.Configure를 참조하십시오 | 게스트 구성 
+
+
+| NetApp SCV.Configure.ConfigureSnapCenterServer를 구성할 수 있습니다 | SnapCenter 서버를 구성합니다 
+
+
+| NetApp SCV.Backup.Backuped가 예약됩니다 | 리소스 그룹을 생성합니다 
+|===
